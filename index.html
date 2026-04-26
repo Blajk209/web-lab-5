@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме - Карпяк Адам</title>
+    <title>Лабораторна робота 4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <header>
+<body class="light-theme">
+
+    <div id="header">
         <h1>Карпяк Адам</h1>
-        
-        <p><strong>Бажана посада:</strong> Web-розробник</p>
-        
-        <p>Email: <a href="mailto:adam.karpiak.kb.2024@lpnu.ua">adam.karpiak.kb.2024@lpnu.ua</a></p>
-        <p>Телефон: <a href="tel:+380784632575">+38 078 463 25 75</a></p>
-    </header>
+        <p>Студент спеціальності Кібербезпека</p>
+        <button id="themeToggle">Змінити тему</button>
+    </div>
 
-    <hr>
+    <div class="section">
+        <h2>Про себе</h2>
+        <p>Я студент Львівської політехніки. Вивчаю веб-розробку, бази даних, комп'ютерні мережі та Python.</p>
+    </div>
 
-   <main>
-        <section>
-            <h2>Про себе</h2>
-            <p>Привіт! Я студент Львівської політехніки, захоплююся ІТ та веб-розробкою. Швидко навчаюся, вмію шукати інформацію та маю велике бажання розвиватися як розробник. У вільний час вивчаю нові технології та працюю над власними міні-проєктами.</p>
-        </section>
+    <div class="section">
+        <h2>Технічні навички</h2>
+        <ul>
+            <li>💻 Мови програмування: JavaScript, Python, HTML/CSS</li>
+            <li>🗄️ Бази даних: SQL</li>
+            <li>🛠️ Інструменти: Git, VS Code</li>
+            <li>🖥️ Операційні системи: Windows</li>
+        </ul>
+    </div>
 
-        <section>
-            <h2>Навички</h2>
-            <ul>
-                <li><strong>Технології:</strong> HTML5, базові знання CSS, основи програмування</li>
-                <li><strong>Інструменти:</strong> Git, GitHub, VS Code</li>
-                <li><strong>Іноземні мови:</strong> Англійська (Pre-Intermediate / читання технічної документації)</li>
-                <li><strong>Soft skills:</strong> уважність до деталей, відповідальність, здатність швидко вчитися</li>
-            </ul>
-        </section>
+    <div class="section">
+        <h2>Коментарі користувачів</h2>
+        <div id="commentsContainer">
+            Тут будуть коментарі з сервера...
+        </div>
+    </div>
 
-        <section>
-            <h2>Освіта</h2>
-            <h3>Національний університет "Львівська політехніка"</h3>
-            <p><strong>Спеціальність:</strong> Кібербезпека </p>
-            <p><strong>Період навчання:</strong> 2024 - 2028</p>
-        </section>
+    <div class="section">
+        <h2>Дані з localStorage</h2>
+        <div id="storageInfo">
+            Тут буде інформація з localStorage...
+        </div>
+    </div>
 
-       
-    </main>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close-btn">&times;</span>
+            <h2>Форма зворотного зв'язку</h2>
+            <form id="feedbackForm" action="https://formspree.io/f/xeepoeka" method="POST">
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
 
-    <hr>
-
-    <footer>
-        <p><small><section>
-            <h2>Досвід роботи</h2>
-            <p>Комерційного досвіду поки не маю. Набуваю практики через створення навчальних веб-сторінок, вирішення алгоритмічних задач та роботу з системою контролю версій Git.</p>
-        </section></small></p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
